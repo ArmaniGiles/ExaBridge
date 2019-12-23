@@ -1,0 +1,31 @@
+junior dev jobs, recipe api, restuarant e-commerce, heat map, social network
+AWS certifacyion, SQL
+vuejs, reactjs, plotly dash, swagger api
+postgres, msql, mongodb
+
+How to get a job as a juinor dev videos, 
+
+Single sign on
+
+django serialzers
+indox
+videos
+discussion
+
+live coding 
+
+1.) 
+
+2.)  artilces,
+
+3 .) pracitce probelms - online IDE 
+
+4.) * job postings 
+
+Our top devs we will search a job for you
+
+models
+
+6.) AI search Alogortrim matchinig
+
+5.) users, resume uploading 
