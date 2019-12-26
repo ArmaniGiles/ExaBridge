@@ -3,6 +3,8 @@ AWS certifacyion, SQL
 vuejs, reactjs, plotly dash, swagger api
 postgres, msql, mongodb
 
+react and django tutorial
+
 How to get a job as a juinor dev videos, 
 
 Single sign on
@@ -29,3 +31,5 @@ models
 6.) AI search Alogortrim matchinig
 
 5.) users, resume uploading 
+
+
