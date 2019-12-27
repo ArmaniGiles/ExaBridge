@@ -7,10 +7,14 @@ from django.conf.urls.static import static
 router = routers.SimpleRouter()
 
 app_name='devaccounts'
-
+#Add Django site authentication urls (for login, logout, password management)
+# APPEND_SLASH = True
 urlpatterns = [
     path('register/', Register.as_view(), name='register'),
-    path('', Main.as_view(), name='main')
+    path('', Main.as_view(), name='main'),
+    # path('accounts/', include('django.contrib.auth.urls')),
+    
+
 
     # path('register', DevRegisterSet.as_view(), name='register'),
 
