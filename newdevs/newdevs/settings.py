@@ -56,12 +56,14 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'newdevs.urls'
+BASE_DIR2 = BASE_DIR + '\devaccounts'
+
 # APPEND_SLASH = False
 # BASE_DIR2 = "C:\Users\bless\OneDrive\Documents\Django\NewDevs\ExaBridge\newdevs\devaccounts"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),os.path.join(BASE_DIR2, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -124,6 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 # MEDIA_ROOT = '../devaccounts/media/'
+
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media') 
 MEDIA_URL = '/media/'
 print('MEDIA_ROOT : ',MEDIA_ROOT)
@@ -134,4 +137,7 @@ print('STATIC_URL :' ,STATIC_URL)
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
 print('STATICFILES_DIRS  :',STATICFILES_DIRS)
+LOGIN_REDIRECT_URL = '/'
+# LOGOUT_REDIRECT_URL = ""
