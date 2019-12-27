@@ -12,7 +12,7 @@ app_name='devaccounts'
 urlpatterns = [
     path('register/', Register.as_view(), name='register'),
     path('', Main.as_view(), name='main'),
-    # path('accounts/', include('django.contrib.auth.urls')),
+    # path('logout/', include('django.contrib.auth.urls')),
     
 
 

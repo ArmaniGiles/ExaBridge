@@ -41,8 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'rest_framework',
     'devaccounts',
+
 ]
 
 MIDDLEWARE = [
@@ -56,14 +58,19 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'newdevs.urls'
-BASE_DIR2 = BASE_DIR + '\devaccounts'
+BASE_DIR_DEVACCOUNTS = BASE_DIR + '\\devaccounts'
+BASE_DIR_NEWDEVS = BASE_DIR + '\\newdevs'
+
 
 # APPEND_SLASH = False
 # BASE_DIR2 = "C:\Users\bless\OneDrive\Documents\Django\NewDevs\ExaBridge\newdevs\devaccounts"
+#os.path.join(BASE_DIR2, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),os.path.join(BASE_DIR2, 'templates')],
+        'DIRS': [ os.path.join(BASE_DIR, 'templates'), 
+                  os.path.join(BASE_DIR_NEWDEVS, 'templates'), 
+                  os.path.join(BASE_DIR_DEVACCOUNTS, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -139,5 +146,5 @@ STATICFILES_DIRS = [
 ]
 
 print('STATICFILES_DIRS  :',STATICFILES_DIRS)
-LOGIN_REDIRECT_URL = '/'
-# LOGOUT_REDIRECT_URL = ""
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'

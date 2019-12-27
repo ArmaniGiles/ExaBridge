@@ -11,7 +11,7 @@ from django.http import HttpResponseRedirect
 class Main(generics.ListCreateAPIView):
     renderer_classes = [TemplateHTMLRenderer]
     queryset = DevUser.objects.all()
-    template_name = 'main.html'
+    template_name = 'devaccounts/main.html'
 
     def get(self, request):
         someDict = {'Fox':'One'}
@@ -34,7 +34,7 @@ class Main(generics.ListCreateAPIView):
 class Register(generics.CreateAPIView):
     renderer_classes = [TemplateHTMLRenderer]
     queryset = DevUser.objects.all()
-    template_name = 'register.html'
+    template_name = 'devaccounts/register.html'
 
     def get(self, request):
         someDict = {'Fox':'One'}

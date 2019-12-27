@@ -1,0 +1,9 @@
+Create two differnt forms. Canidate and Employeer
+Implement  Materilize css
+use django's default user permision 
+Customize Django User  model
+AWS Certicate 
+dockerize app
+Delploy website host on AWS
+Deploy transaction money
+Modify user page Employer vs Canidate

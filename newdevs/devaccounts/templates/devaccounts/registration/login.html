@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+    <title>Document</title>
+    <style>
+        #button {
+          position: relative;
+          margin-top: -25px;
+          margin-right: 10%;
+          float: right;
+        }
+        #form {
+          box-shadow: 10px 14px 18px 10px rgba(0, 0, 0, 0.2);
+          transition: 0.3s;
+          width: 33%;
+          border-radius: 5px;
+          position: absolute;
+          margin-top: 30px;
+        }
+        #form:hover {
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        .icon_FF5A5F {
+          color: #FF5A5F;
+          margin-left: 43%;
+        }
+        .flex-container {
+          display: flex;
+          justify-content: center;
+          /* margin:auto; */
+        }
+        .flex-container>form {
+          align-items: center;
+        }
+      </style>
+    
+</head>
+
+<body>
+    
+</body>
+</html>
+
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}
+
+{% if next %}
+{% if user.is_authenticated %}
+  <p>Your account doesn't have access to this page. To proceed,
+  please login with an account that has access.</p>
+{% else %}
+  <p>Please login to see this page.</p>
+{% endif %}
+{% endif %}
+
+
+
+
+  {% if form.errors %}
+    <p>Your username and password didn't match. Please try again.</p>
+  {% endif %}
+  
+  {% if next %}
+    {% if user.is_authenticated %}
+      <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
+    {% else %}
+      <p>Please login to see this page.</p>
+    {% endif %}
+  {% endif %}
+  
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <table>
+      <tr>
+        <td>{{ form.username.label_tag }}</td>
+        <td>{{ form.username }}</td>
+      </tr>
+      <tr>
+        <td>{{ form.password.label_tag }}</td>
+        <td>{{ form.password }}</td>
+      </tr>
+    </table>
+    <input type="submit" value="login" />
+    <input type="hidden" name="next" value="{{ next }}" />
+  </form>
+  
+  {# Assumes you setup the password_reset view in your URLconf #}
+  <p><a href="{% url 'password_reset' %}">Lost password?</a></p>
+
+</body>
+</html>
+  
