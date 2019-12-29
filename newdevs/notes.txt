@@ -1,8 +1,9 @@
 junior dev jobs, recipe api, restuarant e-commerce, heat map, social network
 AWS certifacyion, SQL
-vuejs, reactjs, plotly dash, swagger api
+Django- User lgon permissiom
+vuejs, reactjs, plotly dash, swagger api, Groups 
 postgres, msql, mongodb
-
+Make a Forum specifically for WEb/ AI
 react and django tutorial
 
 How to get a job as a juinor dev videos, 
