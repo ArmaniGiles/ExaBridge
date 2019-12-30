@@ -46,7 +46,7 @@
 <body>
   <!-- <div>          <a href="#" class="brand-logo" style="color:#f6f8fa;color:black">Why Bronto Bridge ?</a></div> -->
 
-  {% include 'navbar.html' %}
+  {% include 'devaccounts/navbar.html' %}
   <div class="flex-container">
     <form id="form" action="{% url 'devaccounts:register' %}" method="POST">
       {% csrf_token %}

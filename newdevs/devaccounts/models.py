@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from .managers import CustomUserManager
 
-# class UserResume(models.Model):
+# class AnonymousUserResume(models.Model):
 #     resume = models.FileField()
 
 class DevUser(AbstractUser):
@@ -19,12 +19,21 @@ class DevUser(AbstractUser):
 
     objects = CustomUserManager()
 
+    class Meta:
+        verbose_name = 'Developer Account'
+        verbose_name_plural = 'Developer Accounts'
+
     def __str__(self):
         return self.email
 
 class EmployerAccount(DevUser):
     company_name = models.CharField(max_length=200)
     job_description = models.TextField(max_length=200)
+
+    class Meta:
+        verbose_name = 'Employer Account'
+        verbose_name_plural = 'Employer Accounts'
+
 
     def __str__(self):
         return self.company_name
