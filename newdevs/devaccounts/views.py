@@ -43,33 +43,7 @@ class Register(generics.CreateAPIView):
         return Response(someDict)
 
     def create(self, request):
-        job_candidate = Group.objects.get_or_create(name='job_candidate')
-        employer = Group.objects.get_or_create(name='employer')
-
-
-        # employer = Group.objects.create(name='employer')
-
-        # new_group, created = Group.objects.get_or_create(name='job_candidate')
-
-        # if 'company_name' in request.data:
-        #     Employee.objects.create(
-        #                         first_name=request.data['firstname'],
-        #                         last_name=request.data['lastname'],
-        #                         company_name=request.data['company_name'],
-        #                         email=request.data['email'], 
-        #                         password=request.data['password'])
-        #     # g1.user_set.add(user1, user2, user5, user7)
-        #     ExaGroup.employerGroup.user_set.add(Employee)
-        # else:
-        #     DevUser.objects.create(
-        #                             first_name=request.data['firstname'],
-        #                             last_name=request.data['lastname'],
-        #                             email=request.data['email'], 
-        #                             password=request.data['password'])
-        #     ExaGroup.jobCandidateGroup.user_set.add(DevUser)
-        
-
-
+        ExaGroup.checkGroup(request)
 
         someDict = {'Fox':'One'}
         return HttpResponseRedirect('/')
