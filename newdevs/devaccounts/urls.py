@@ -3,6 +3,8 @@ from .views import  Register, Main
 from rest_framework import routers
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic.base import TemplateView # new
+
 
 router = routers.SimpleRouter()
 
@@ -11,7 +13,9 @@ app_name='devaccounts'
 # APPEND_SLASH = True
 urlpatterns = [
     path('register/', Register.as_view(), name='register'),
-    path('', Main.as_view(), name='main'),
+    path('', Main.as_view()),
+    # path('home/', TemplateView.as_view(template_name='home.html'), name='home'), # new
+
     # path('logout/', include('django.contrib.auth.urls')),
     
 

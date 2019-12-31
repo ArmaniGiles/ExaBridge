@@ -7,14 +7,13 @@ from rest_framework.response import Response
 from rest_framework.renderers import TemplateHTMLRenderer
 from .groups import ExaGroup
 from django.http import HttpResponseRedirect
-from django.contrib.auth.models import Group
 
 
 
 class Main(generics.ListCreateAPIView):
     renderer_classes = [TemplateHTMLRenderer]
     queryset = DevUser.objects.all()
-    template_name = 'devaccounts/main.html'
+    template_name = 'devaccounts/jobpanel.html'
 
     def get(self, request):
         someDict = {'Fox':'One'}
