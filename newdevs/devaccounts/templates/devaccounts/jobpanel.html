@@ -1,40 +1,14 @@
-<!-- <div id="div1" style="display:inline-block;width: 50%;">
-  <p>A</p>
-</div>
-<div id="div2" style="display:inline-block; width: 50%;">
-  <p>A</p>
-</div> -->
 
-<!-- <div style="margin-top: 10px;width:49%;margin-right: 2px;">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span style="display: inline;" class="card-title">Job Title</span>
-          <h6>Company Name</h6>
+{% extends 'devaccounts/main.html' %}
+{% load static %}
 
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Full Page</a>
-        </div>
-      </div>
-    </div> -->
-  
-    <!-- <div style="margin-top:10px;margin-right:10px;width: 49%;border-color: blue-grey;border-width: thin;border-width: thin;">
-      <div class="card" style="border-color: blue-grey;border-width: thin;border-style: solid;background-color: #546e7a;">
-        <div class="card-content white-text" >
-          <span style="display: inline;" class="card-title">Job Title</span>
-          <h6 >Company Name</h6>
+{% comment %}<link rel="stylesheet" href="{% static 'css/jobpanel.css' %}"> {% endcomment %}
+    {% block content %}
+    {% include 'devaccounts/searchbar.html' %}
 
-          <p >I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Full Page</a>
-        </div>
-      </div>
-    </div> -->
-    
+    <div class="container" style="color:#4f7d92;margin-top: 20%; width: 80%;">
+
+
     <div style="margin-top:-130px;margin-right:5px;margin-bottom:12%;width: 49%;border-color: blue-grey;border-width: thin;border-width: thin;">
       <div class="card" style="border-color: blue-grey;border-width: thin;border-style: solid;">
         <div class="card-content white-text" >
@@ -49,6 +23,7 @@
         </div>
       </div>
     </div>
+    <!-- BREAK -->
     <div style="margin-top:-130px;margin-right:5px;margin-bottom:12%;width: 49%;border-color: blue-grey;border-width: thin;border-width: thin;">
       <div class="card" style="border-color: blue-grey;border-width: thin;border-style: solid;">
         <div class="card-content white-text" >
@@ -63,31 +38,5 @@
         </div>
       </div>
     </div>
-    <!-- <div style="margin-top:-130px;margin-right:5px;margin-bottom:12%;width: 49%;border-color: blue-grey;border-width: thin;border-width: thin;">
-      <div class="card" style="border-color: blue-grey;border-width: thin;border-style: solid;">
-        <div class="card-content white-text" >
-          <span style="display: inline;color:#4f7d92" class="card-title">Job Title</span>
-          <h6 style="color:#4f7d92">Company Name</h6>
-
-          <p style="color:#4f7d92">I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Full Page</a>
-        </div>
-      </div>
     </div>
-    <div style="margin-top:-130px;margin-right:5px;margin-bottom:12%;width: 49%;border-color: blue-grey;border-width: thin;border-width: thin;">
-      <div class="card" style="border-color: blue-grey;border-width: thin;border-style: solid;">
-        <div class="card-content white-text" >
-          <span style="display: inline;color:#4f7d92" class="card-title">Job Title</span>
-          <h6 style="color:#4f7d92">Company Name</h6>
-
-          <p style="color:#4f7d92">I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">Full Page</a>
-        </div>
-      </div>
-    </div> -->
+    {% endblock %}

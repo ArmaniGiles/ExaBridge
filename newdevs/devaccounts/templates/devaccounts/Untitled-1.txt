@@ -7,3 +7,8 @@ dockerize app
 Delploy website host on AWS
 Deploy transaction money
 Modify user page Employer vs Canidate
+
+Title needs to be Modify. Any length of name needs to  in the center
+How to to get the date of the user uploading a file. 
+
+Link job 

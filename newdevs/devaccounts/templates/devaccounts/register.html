@@ -1,52 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'devaccounts/main.html' %}
+{% load static %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <style>
-    #button {
-      position: relative;
-      margin-top: -25px;
-      margin-right: 10%;
-      float: right;
-    }
-    #form {
-      box-shadow: 10px 14px 18px 10px rgba(0, 0, 0, 0.2);
-      transition: 0.3s;
-      width: 33%;
-      border-radius: 5px;
-      position: absolute;
-      margin-top: 30px;
-    }
-    #form:hover {
-      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    }
-    .icon_FF5A5F {
-      color: #FF5A5F;
-      margin-left: 43%;
-    }
-    .flex-container {
-      display: flex;
-      justify-content: center;
-      /* margin:auto; */
-    }
-    .flex-container>form {
-      align-items: center;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- <div>          <a href="#" class="brand-logo" style="color:#f6f8fa;color:black">Why Bronto Bridge ?</a></div> -->
-
-  {% include 'devaccounts/navbar.html' %}
+{% block content %}
   <div class="flex-container">
     <form id="form" action="{% url 'devaccounts:register' %}" method="POST">
       {% csrf_token %}
@@ -84,8 +39,7 @@
       </div>
     </form>
   </div>
-  {% include './registration/login.html' %}
 
-</body>
+  {% endblock %}
 
-</html>
+
